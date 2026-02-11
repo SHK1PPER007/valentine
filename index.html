@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>💌 Валентинка · сверхкороткая ссылка</title>
+    <!-- LZ-String – лучшее сжатие для URI -->
+    <script src="https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- ========= РЕДАКТОР ========= -->
+        <div id="editor" class="editor-section">
+            <div id="previewCard" class="card style1">
+                <h3>💌 Открытка</h3>
+                <div id="previewTo" class="to-from">💗 Для: ...</div>
+                <div id="previewFrom" class="to-from">💖 От: ...</div>
+                <div id="previewMsg" class="message">С 14 февраля! ❤️</div>
+            </div>
+
+            <div class="form-group">
+                <label>💌 Для кого</label>
+                <input type="text" id="toInput" placeholder="Имя получателя" value="Любимого человека">
+            </div>
+            <div class="form-group">
+                <label>💞 От кого</label>
+                <input type="text" id="fromInput" placeholder="Ваше имя" value="Твоего тайного поклонника">
+            </div>
+            <div class="form-group">
+                <label>📝 Поздравление</label>
+                <textarea id="msgInput" rows="3" placeholder="Напиши что-нибудь нежное...">С 14 февраля! ❤️</textarea>
+            </div>
+
+            <label>🎨 Оформление</label>
+            <div class="style-selector">
+                <div id="style1Btn" class="style-btn active" data-style="1">
+                    <span>🌸</span> Романтика
+                </div>
+                <div id="style2Btn" class="style-btn" data-style="2">
+                    <span>🌷</span> Нежность
+                </div>
+                <div id="style3Btn" class="style-btn" data-style="3">
+                    <span>💎</span> Современный
+                </div>
+            </div>
+
+            <button id="generateBtn" class="btn">🔗 Создать короткую ссылку</button>
+
+            <!-- блок со ссылкой -->
+            <div id="linkContainer" style="margin-top: 24px; display: none;">
+                <div class="short-link-area">
+                    <input type="text" id="shortLinkInput" readonly>
+                    <button id="copyLinkBtn" class="copy-btn">📋 Копировать</button>
+                </div>
+                <p style="color: #9e3c4b; margin-top: 10px; font-size: 0.9rem;">
+                    ✨ Ссылка сжата до минимума и зашифрована
+                </p>
+            </div>
+        </div>
+
+        <!-- ========= ПРОСМОТР ОТКРЫТКИ ========= -->
+        <div id="viewer" class="viewer-section hidden">
+            <div id="viewerCard" class="card style1"></div>
+            <button id="createNewBtn" class="btn back-btn">💘 Создать свою открытку</button>
+        </div>
+
+        <!-- ========= ФУТЕР: НАДПИСЬ + ЛОГОТИП ========= -->
+        <div class="footer">
+            <div class="footer-text">❤️ С 14 февраля!</div>
+            <a href="https://www.instagram.com/svyaz_na_svyazi/" target="_blank" rel="noopener noreferrer" class="footer-logo-link">
+                <img src="logo.png" alt="Хи‑Хи Лис" class="footer-logo">
+            </a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

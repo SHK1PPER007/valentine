@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+}
+
+body {
+    background: #ffe6f0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+.app {
+    max-width: 780px;
+    width: 100%;
+    background: #fff9fb;
+    border-radius: 40px;
+    box-shadow: 0 10px 25px rgba(200, 60, 100, 0.2);
+    padding: 30px 24px;
+    border: 2px solid #ffd9e2;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* === КАРТОЧКА ОТКРЫТКИ === */
+.card {
+    width: 100%;
+    border-radius: 32px;
+    padding: 28px 22px;
+    margin: 20px 0 25px;
+    box-shadow: 0 6px 18px rgba(150, 30, 60, 0.2);
+    transition: all 0.2s;
+    background-size: cover;
+    border: 4px solid white;
+}
+
+.card.style1 {
+    background: radial-gradient(circle at 10% 30%, #ffdde1, #feb4c5);
+    border: 6px double #ff4d6d;
+    color: #590d22;
+    font-family: 'Georgia', serif;
+}
+
+.card.style2 {
+    background: linear-gradient(145deg, #fce4ec, #f8bbd0);
+    border: 4px dashed #c2185b;
+    color: #880e4f;
+    font-family: 'Verdana', sans-serif;
+    box-shadow: 0 0 0 2px #fff0f5, 0 0 0 6px #f48fb1;
+}
+
+.card.style3 {
+    background: linear-gradient(45deg, #e0f2fe, #bae6fd, #a5d8ff);
+    border: 6px solid #0284c7;
+    color: #075985;
+    font-family: 'Trebuchet MS', sans-serif;
+    box-shadow: 6px 6px 0 #0369a1;
+}
+
+.card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.to-from {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 12px 0 6px;
+    background: rgba(255,255,240,0.6);
+    padding: 6px 12px;
+    border-radius: 40px;
+    display: inline-block;
+    word-break: break-word;
+    max-width: 100%;
+}
+
+.message {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    margin-top: 16px;
+    padding: 15px;
+    background: rgba(255,255,245,0.7);
+    border-radius: 24px;
+    word-break: break-word;
+    white-space: pre-wrap;
+}
+
+/* === ФОРМА === */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #a13e5f;
+    margin-bottom: 6px;
+    font-size: 1.1rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px 20px;
+    border: 3px solid #ffc2c9;
+    border-radius: 40px;
+    font-size: 1rem;
+    background: white;
+    outline: none;
+    transition: border 0.1s, box-shadow 0.1s;
+    resize: vertical;
+}
+
+input:focus, textarea:focus {
+    border-color: #ff4d6d;
+    box-shadow: 0 0 0 3px #ffe3e7;
+}
+
+/* === КНОПКИ СТИЛЕЙ === */
+.style-selector {
+    display: flex;
+    gap: 14px;
+    margin: 16px 0 20px;
+    flex-wrap: wrap;
+}
+
+.style-btn {
+    flex: 1 1 100px;
+    padding: 16px 8px;
+    border-radius: 28px;
+    background: white;
+    border: 3px solid #ffb3c6;
+    font-weight: 700;
+    color: #8b3f5a;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 0 #ff9aae;
+    transition: transform 0.07s, box-shadow 0.07s, background 0.1s;
+}
+
+.style-btn:hover {
+    background: #ffe3eb;
+    border-color: #ff8caa;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #ff9aae;
+}
+
+.style-btn.active {
+    border: 4px solid #e6005e;
+    background: #ffe6f1;
+    transform: scale(0.98);
+    box-shadow: 0 2px 0 #e6005e;
+}
+
+.style-btn span {
+    font-size: 1.8rem;
+}
+
+/* === ОСНОВНЫЕ КНОПКИ === */
+.btn {
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 16px 28px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 60px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    box-shadow: 0 6px 0 #a13046;
+    border: 2px solid #ffe6eb;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #ff3355;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 0 #a13046;
+}
+
+.btn:active {
+    transform: translateY(6px);
+    box-shadow: 0 2px 0 #a13046;
+}
+
+.back-btn {
+    background: #c1d9f0;
+    color: #1e3a5f;
+    box-shadow: 0 6px 0 #6d8eac;
+}
+
+.back-btn:hover {
+    background: #a9c9e8;
+    box-shadow: 0 8px 0 #6d8eac;
+}
+
+/* === ССЫЛКА === */
+.short-link-area {
+    display: flex;
+    margin-top: 24px;
+    background: #fff0f3;
+    border-radius: 60px;
+    padding: 6px;
+    border: 3px solid #ff8caa;
+}
+
+.short-link-area input {
+    border: none;
+    background: transparent;
+    padding: 12px 18px;
+    font-size: 0.95rem;
+    color: #1a1a2c;
+    font-weight: 500;
+    flex: 1;
+    min-width: 0;
+}
+
+.copy-btn {
+    background: #ffb3c6;
+    border: none;
+    border-radius: 50px;
+    padding: 0 24px;
+    font-weight: bold;
+    color: #4a1726;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: background 0.1s, transform 0.05s;
+}
+
+.copy-btn:hover {
+    background: #ff9cb3;
+    transform: scale(0.98);
+}
+
+/* === ФУТЕР: НАДПИСЬ + ЛОГОТИП === */
+.footer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.footer-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #b32d5e;
+    text-shadow: 1px 1px 0 #fff0f3;
+    letter-spacing: 1px;
+}
+
+.footer-logo-link {
+    display: inline-flex;
+    align-items: center;
+    transition: opacity 0.1s;
+}
+
+.footer-logo-link:hover {
+    opacity: 0.8;
+}
+
+.footer-logo {
+    height: 150px;
+    width: auto;
+    display: block;
+}
+
+/* === АДАПТИВ === */
+@media (max-width: 600px) {
+    .app {
+        padding: 24px 18px;
+    }
+    .card {
+        padding: 20px 16px;
+    }
+    .card h3 {
+        font-size: 1.4rem;
+    }
+    .to-from {
+        font-size: 1rem;
+        padding: 5px 10px;
+    }
+    .message {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+    .style-btn {
+        padding: 12px 6px;
+        font-size: 0.9rem;
+    }
+    .style-btn span {
+        font-size: 1.5rem;
+    }
+    .btn {
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+    .short-link-area {
+        flex-direction: column;
+        background: transparent;
+        border: none;
+        gap: 10px;
+        padding: 0;
+    }
+    .short-link-area input {
+        background: #fff0f3;
+        border: 3px solid #ff8caa;
+        border-radius: 60px;
+        padding: 14px 18px;
+        width: 100%;
+    }
+    .copy-btn {
+        padding: 14px 24px;
+        justify-content: center;
+        width: 100%;
+    }
+    .footer-text {
+        font-size: 1.1rem;
+    }
+    .footer-logo {
+        height: 55px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app {
+        padding: 20px 14px;
+    }
+    .style-selector {
+        gap: 8px;
+    }
+    .style-btn {
+        padding: 10px 4px;
+        font-size: 0.85rem;
+    }
+    .footer-logo {
+        height: 55px;
+    }
+}
