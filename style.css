@@ -28,6 +28,77 @@ body {
     display: none !important;
 }
 
+/* === ТАЙМЕР === */
+.countdown-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
+    width: 100%;
+}
+
+.countdown-card {
+    background: #fff0f5;
+    border-radius: 60px 60px 40px 40px;
+    padding: 32px 24px;
+    box-shadow: 0 12px 0 #ffb6c1, 0 0 0 4px white, 0 0 0 8px #ffe3eb;
+    width: 100%;
+    text-align: center;
+    border: 2px solid #ff8caa;
+}
+
+.countdown-card h2 {
+    font-size: 2rem;
+    color: #b32d5e;
+    margin-bottom: 24px;
+    text-shadow: 2px 2px 0 #ffe6f0;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.timer-item {
+    background: white;
+    border-radius: 30px;
+    padding: 16px 12px;
+    min-width: 90px;
+    box-shadow: 0 6px 0 #ff9aae, inset 0 -2px 0 #ffe3eb;
+    border: 3px solid #ffb3c6;
+}
+
+.timer-item span:first-child {
+    display: block;
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #c2185b;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.timer-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #a13e5f;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.countdown-message {
+    font-size: 1.1rem;
+    color: #8b3f5a;
+    background: rgba(255, 240, 245, 0.7);
+    padding: 12px 20px;
+    border-radius: 40px;
+    backdrop-filter: blur(2px);
+    margin-top: 16px;
+}
+
 /* === КАРТОЧКА ОТКРЫТКИ === */
 .card {
     width: 100%;
@@ -247,7 +318,7 @@ input:focus, textarea:focus {
     transform: scale(0.98);
 }
 
-/* === ФУТЕР: НАДПИСЬ + ЛОГОТИП === */
+/* === ФУТЕР === */
 .footer {
     margin-top: 30px;
     display: flex;
@@ -276,15 +347,41 @@ input:focus, textarea:focus {
 }
 
 .footer-logo {
-    height: 150px;
+    height: 250px;
     width: auto;
     display: block;
+}
+
+/* === СООБЩЕНИЕ В ПРОСМОТРЩИКЕ (до 14 февраля) === */
+.viewer-message {
+    background: #fff0f5;
+    border-radius: 60px;
+    padding: 18px 24px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #880e4f;
+    border: 3px dashed #ff8caa;
+    font-weight: 600;
 }
 
 /* === АДАПТИВ === */
 @media (max-width: 600px) {
     .app {
         padding: 24px 18px;
+    }
+    .countdown-card {
+        padding: 24px 16px;
+    }
+    .countdown-card h2 {
+        font-size: 1.6rem;
+    }
+    .timer-item {
+        min-width: 70px;
+        padding: 12px 8px;
+    }
+    .timer-item span:first-child {
+        font-size: 2rem;
     }
     .card {
         padding: 20px 16px;
@@ -334,7 +431,7 @@ input:focus, textarea:focus {
         font-size: 1.1rem;
     }
     .footer-logo {
-        height: 55px;
+        height: 125px;
     }
 }
 
@@ -349,7 +446,13 @@ input:focus, textarea:focus {
         padding: 10px 4px;
         font-size: 0.85rem;
     }
-    .footer-logo {
-        height: 55px;
+    .timer {
+        gap: 8px;
+    }
+    .timer-item {
+        min-width: 60px;
+    }
+    .timer-item span:first-child {
+        font-size: 1.8rem;
     }
 }
