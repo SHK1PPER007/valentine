@@ -3,15 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
-    <title>💌 Валентинка · сверхкороткая ссылка</title>
-    <!-- LZ-String – лучшее сжатие для URI -->
+    <title>Валентинка</title>
     <script src="https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="app">
-        <!-- ========= РЕДАКТОР ========= -->
-        <div id="editor" class="editor-section">
+        <!-- ========= БЛОК ТАЙМЕРА (до 14 февраля) ========= -->
+        <div id="countdown" class="countdown-section">
+            <div class="countdown-card">
+                <h2>❤️ Скоро 14 февраля!</h2>
+                <div class="timer">
+                    <div class="timer-item">
+                        <span id="days">00</span>
+                        <span class="timer-label">дней</span>
+                    </div>
+                    <div class="timer-item">
+                        <span id="hours">00</span>
+                        <span class="timer-label">часов</span>
+                    </div>
+                    <div class="timer-item">
+                        <span id="minutes">00</span>
+                        <span class="timer-label">минут</span>
+                    </div>
+                    <div class="timer-item">
+                        <span id="seconds">00</span>
+                        <span class="timer-label">секунд</span>
+                    </div>
+                </div>
+                <p class="countdown-message">Создание открыток станет доступным<br>в 00:00 14 февраля ✨</p>
+            </div>
+        </div>
+
+        <!-- ========= РЕДАКТОР (доступен только с 14.02) ========= -->
+        <div id="editor" class="editor-section hidden">
             <div id="previewCard" class="card style1">
                 <h3>💌 Открытка</h3>
                 <div id="previewTo" class="to-from">💗 Для: ...</div>
@@ -59,16 +84,16 @@
             </div>
         </div>
 
-        <!-- ========= ПРОСМОТР ОТКРЫТКИ ========= -->
+        <!-- ========= ПРОСМОТР ГОТОВОЙ ОТКРЫТКИ ========= -->
         <div id="viewer" class="viewer-section hidden">
             <div id="viewerCard" class="card style1"></div>
-            <button id="createNewBtn" class="btn back-btn">💘 Создать свою открытку</button>
+            <div id="viewerAction"></div>
         </div>
 
         <!-- ========= ФУТЕР: НАДПИСЬ + ЛОГОТИП ========= -->
         <div class="footer">
             <div class="footer-text">❤️ С 14 февраля!</div>
-            <a href="https://www.instagram.com/svyaz_na_svyazi/" target="_blank" rel="noopener noreferrer" class="footer-logo-link">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="footer-logo-link">
                 <img src="logo.png" alt="Хи‑Хи Лис" class="footer-logo">
             </a>
         </div>
